@@ -5,6 +5,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import userEvent from "@testing-library/user-event";
 import { FilterPanel } from "./FilterPanel";
 import staysReducer from "../../store/staysSlice";
+import type { StaysState } from "../../store/staysSlice";
 
 vi.mock("./components/DesktopWrapper", () => ({
   DesktopWrapper: ({
@@ -36,7 +37,9 @@ vi.mock("./components/MobileWrapper", () => ({
   ),
 }));
 
-const createMockStore = (preloadedState = {}) =>
+const createMockStore = (
+  preloadedState: { stays?: Partial<StaysState> } = {},
+) =>
   configureStore({
     reducer: {
       stays: staysReducer,
