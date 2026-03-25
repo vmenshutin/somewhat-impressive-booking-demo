@@ -1,0 +1,69 @@
+@use "../../styles/variables" as vars;
+
+.container {
+  padding: vars.$space-16;
+}
+
+.title {
+  margin-bottom: vars.$space-16;
+}
+
+.legend {
+  display: flex;
+  gap: vars.$space-16;
+  align-items: center;
+  margin-bottom: vars.$space-16;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: vars.$space-8;
+}
+
+.legendDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.availableDot {
+  background-color: rgba(25, 118, 210, 0.1);
+  border-color: rgba(25, 118, 210, 0.35);
+}
+
+.unavailableDot {
+  background-color: vars.$color-neutral-200;
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+.emptyAlert {
+  margin-bottom: vars.$space-16;
+}
+
+.calendar {
+  width: 100%;
+}
+
+.calendarDay {
+  transition: background-color 200ms ease;
+}
+
+.availableDay {
+  background-color: rgba(25, 118, 210, 0.1);
+
+  &:hover {
+    background-color: rgba(25, 118, 210, 0.16);
+  }
+
+  &:global(.Mui-selected),
+  &:global(.Mui-selected:hover) {
+    background-color: vars.$color-primary;
+  }
+}
+
+.unavailableDay {
+  cursor: not-allowed;
+}

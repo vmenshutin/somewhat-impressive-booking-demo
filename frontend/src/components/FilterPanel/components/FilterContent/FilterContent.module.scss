@@ -1,0 +1,61 @@
+@use "../../../../styles/variables" as vars;
+
+.filterContent {
+  width: 100%;
+  min-width: 0;
+}
+
+.filterSection {
+  width: 100%;
+  min-width: 0;
+}
+
+.sectionTitle {
+  font-weight: 600;
+}
+
+.datePickerField {
+  :global(.MuiOutlinedInput-root) {
+    border-radius: vars.$radius-4;
+    transition: all vars.$transition-fast;
+  }
+
+  :global(.MuiOutlinedInput-notchedOutline) {
+    border-color: rgba(0, 0, 0, 0.23);
+  }
+
+  &:hover :global(.MuiOutlinedInput-notchedOutline) {
+    border-color: vars.$color-primary;
+  }
+
+  :global(.Mui-focused .MuiOutlinedInput-notchedOutline) {
+    border-width: 1px;
+  }
+}
+
+.searchIcon {
+  margin-right: vars.$space-8;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.priceSlider {
+  width: 85% !important;
+  margin-left: vars.$space-12;
+}
+
+.actionRow {
+  width: 100%;
+}
+
+@media (max-width: vars.$breakpoint-md) {
+  .filterContent {
+    padding-bottom: vars.$space-8;
+  }
+
+  .actionRow {
+    position: sticky;
+    bottom: 0;
+    background: vars.$color-white;
+    padding-top: vars.$space-8;
+  }
+}

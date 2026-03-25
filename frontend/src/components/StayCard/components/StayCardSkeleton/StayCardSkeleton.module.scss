@@ -1,0 +1,39 @@
+@use "../../../styles/variables" as vars;
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.titleSkeleton {
+  margin-bottom: vars.$space-8;
+}
+
+.subtitleSkeleton {
+  margin-bottom: vars.$space-16;
+}
+
+.detailSkeleton {
+  margin-bottom: vars.$space-8;
+}
+
+.tagRow {
+  display: flex;
+  gap: vars.$space-4;
+  margin-bottom: vars.$space-16;
+}
+
+.footer {
+  padding: vars.$space-16;
+  padding-top: 0;
+}
+
+.footerTextSkeleton {
+  margin-bottom: vars.$space-8;
+}

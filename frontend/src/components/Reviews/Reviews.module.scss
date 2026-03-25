@@ -1,0 +1,39 @@
+@use "../../styles/variables" as vars;
+
+.reviewsCard {
+  padding: vars.$space-32;
+}
+
+.reviewsTitle {
+  font-weight: 700;
+  margin-bottom: vars.$space-24;
+  display: flex;
+  align-items: center;
+  gap: vars.$space-8;
+}
+
+.reviewsLoading {
+  display: flex;
+  justify-content: center;
+  padding: vars.$space-24 0;
+}
+
+.reviewsList {
+  margin-bottom: vars.$space-32;
+}
+
+.reviewsEmptyAlert {
+  margin-top: vars.$space-16;
+  margin-bottom: vars.$space-32;
+}
+
+.reviewFormTitle {
+  font-weight: 600;
+  margin-bottom: vars.$space-16;
+}
+
+@media (max-width: vars.$breakpoint-sm) {
+  .reviewsCard {
+    padding: vars.$space-24;
+  }
+}

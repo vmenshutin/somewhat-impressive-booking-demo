@@ -1,0 +1,68 @@
+@use "../../../../styles/variables" as vars;
+
+.swipeHandleTrigger {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: vars.$space-4;
+  padding: vars.$space-12 vars.$space-16;
+  background-color: vars.$color-white;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: opacity vars.$transition-fast;
+}
+
+.swipeHandleBar {
+  width: 48px;
+  height: vars.$space-4;
+  background-color: rgba(0, 0, 0, 0.12);
+  border-radius: vars.$radius-8;
+  transition: background-color vars.$transition-fast;
+
+  &:hover {
+    background-color: vars.$color-primary;
+  }
+}
+
+.swipeHandleText {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+  transition: color vars.$transition-fast;
+
+  &:hover {
+    color: vars.$color-primary;
+  }
+}
+
+.mobileDrawer {
+  :global(.MuiDrawer-paper) {
+    border-top-left-radius: vars.$radius-16;
+    border-top-right-radius: vars.$radius-16;
+    max-height: 85vh;
+  }
+}
+
+.mobileDrawerHandleWrap {
+  display: flex;
+  justify-content: center;
+  padding: vars.$space-12 0 vars.$space-8;
+  flex-shrink: 0;
+}
+
+.mobileDrawerHandle {
+  width: 40px;
+  height: vars.$space-4;
+  background-color: rgba(0, 0, 0, 0.12);
+  border-radius: vars.$radius-8;
+}
+
+.mobileDrawerContent {
+  padding: 0 vars.$space-16 vars.$space-24;
+  overflow-y: auto;
+}

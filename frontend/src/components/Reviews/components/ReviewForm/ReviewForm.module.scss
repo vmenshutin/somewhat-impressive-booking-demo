@@ -1,0 +1,36 @@
+@use "../../../../styles/variables" as vars;
+
+.formDivider {
+  margin: vars.$space-16 0;
+}
+
+.ratingSection {
+  margin: vars.$space-16 0;
+}
+
+.ratingLabel {
+  margin-bottom: vars.$space-8;
+  font-weight: 500;
+}
+
+.errorAlert {
+  margin-top: vars.$space-16;
+}
+
+.submitButton {
+  margin-top: vars.$space-24;
+  transition:
+    transform vars.$transition-fast,
+    box-shadow vars.$transition-fast;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(25, 118, 210, 0.24);
+  }
+}
+
+.loadingContent {
+  display: flex;
+  align-items: center;
+  gap: vars.$space-8;
+}

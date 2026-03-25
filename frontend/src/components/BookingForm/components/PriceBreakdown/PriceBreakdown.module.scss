@@ -1,0 +1,51 @@
+@use "../../../../styles/variables" as vars;
+
+.priceBreakdown {
+  margin-top: vars.$space-20;
+  padding: vars.$space-16;
+  background-color: vars.$color-bg-light;
+  border-radius: vars.$radius-4;
+}
+
+.priceBreakdownTitle {
+  margin-bottom: vars.$space-12;
+  font-weight: 700;
+}
+
+.priceBreakdownStack {
+  margin-bottom: vars.$space-16;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceValue {
+  font-weight: 600;
+}
+
+.priceDivider {
+  margin: vars.$space-8 0;
+}
+
+.priceTotalLabel {
+  font-weight: 700;
+}
+
+.priceTotalValue {
+  font-weight: 700;
+  color: vars.$color-primary;
+}
+
+.nightsChip {
+  color: vars.$color-primary !important;
+  border-color: vars.$color-primary !important;
+}
+
+@media (max-width: vars.$breakpoint-sm) {
+  .priceBreakdown {
+    padding: vars.$space-14;
+  }
+}

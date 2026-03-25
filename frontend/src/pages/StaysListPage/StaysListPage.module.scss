@@ -1,0 +1,114 @@
+@use "../../styles/variables" as vars;
+
+.pageContainer {
+  padding: vars.$space-32 0;
+}
+
+.pageLayout {
+  display: flex;
+  align-items: flex-start;
+  gap: vars.$space-24;
+}
+
+.listingsContent {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  gap: vars.$space-24;
+  align-items: flex-start;
+}
+
+.cardsColumn {
+  flex: 1;
+  min-width: 0;
+}
+
+.mapColumn {
+  width: 420px;
+  flex-shrink: 0;
+  position: sticky;
+  top: vars.$space-80;
+  height: calc(100vh - vars.$space-96);
+}
+
+.mapPaper {
+  box-shadow: vars.$shadow-medium;
+  border-radius: vars.$radius-8;
+  overflow: hidden;
+  height: 100%;
+}
+
+.mapFallback {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: vars.$color-bg-default;
+}
+
+.sortBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: vars.$space-24;
+  gap: vars.$space-16;
+  flex-wrap: wrap;
+}
+
+.resultsCount {
+  font-weight: 600;
+}
+
+.sortControl {
+  min-width: 180px;
+}
+
+.stayCardWrap {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.stayCardDimmed {
+  opacity: 0.6;
+}
+
+@media (max-width: vars.$breakpoint-lg) {
+  .listingsContent {
+    flex-direction: column-reverse;
+  }
+
+  .cardsColumn {
+    width: 100%;
+    max-height: calc(100vh - vars.$space-80 - 240px - vars.$space-24);
+    overflow-y: auto;
+    padding-top: vars.$space-16;
+  }
+
+  .mapColumn {
+    width: 100%;
+    position: sticky;
+    top: vars.$space-80;
+    height: 240px;
+    z-index: 1;
+  }
+}
+
+@media (max-width: vars.$breakpoint-md) {
+  .pageLayout {
+    display: block;
+  }
+
+  .pageContainer {
+    padding-bottom: vars.$space-88;
+  }
+}
+
+@media (max-width: vars.$breakpoint-sm) {
+  .pageContainer {
+    padding-top: vars.$space-24;
+  }
+
+  .mapFallback {
+    height: 240px;
+  }
+}

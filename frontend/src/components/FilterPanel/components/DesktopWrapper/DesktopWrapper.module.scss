@@ -1,0 +1,63 @@
+@use "../../../../styles/variables" as vars;
+
+.desktopDrawer {
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: width 225ms ease;
+  position: sticky;
+  top: vars.$space-80;
+  max-height: calc(100vh - vars.$space-96);
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: vars.$space-12 0 vars.$space-4;
+  flex-shrink: 0;
+  margin-top: -(vars.$space-8);
+  margin-bottom: vars.$space-16;
+
+  .closeFiltersIconButton {
+    padding: 0;
+    margin-right: -(vars.$space-8);
+    &:hover {
+      transform: scale(1.1);
+      background: none !important;
+    }
+  }
+}
+
+.headerTitle {
+  font-weight: 600;
+}
+
+.desktopContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: vars.$space-8 0 vars.$space-16;
+}
+
+.collapsedRail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: vars.$space-12 0;
+  gap: vars.$space-4;
+  opacity: 1;
+  transition: opacity 200ms ease;
+
+  button {
+    padding: 0;
+    margin-top: -(vars.$space-8);
+    margin-left: -(vars.$space-8);
+    transition: transform vars.$transition-fast;
+
+    &:hover {
+      transform: scale(1.1);
+      background: none !important;
+    }
+  }
+}

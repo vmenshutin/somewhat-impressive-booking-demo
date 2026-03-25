@@ -1,0 +1,206 @@
+@use "../../styles/variables" as vars;
+
+.loadingShell,
+.pageShell {
+  background-color: vars.$color-bg-default;
+  min-height: 100vh;
+  padding: vars.$space-32 0;
+}
+
+.loadingSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$space-16;
+}
+
+.notFoundContainer {
+  padding: vars.$space-64 0;
+}
+
+.notFoundContent {
+  text-align: center;
+}
+
+.notFoundTitle {
+  margin-bottom: vars.$space-16;
+}
+
+.backButton {
+  margin-bottom: vars.$space-24;
+  text-transform: none;
+}
+
+.heroImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: vars.$radius-16;
+  margin-bottom: vars.$space-24;
+  box-shadow: vars.$shadow-soft;
+}
+
+.infoCard {
+  padding: vars.$space-32;
+}
+
+.infoCard {
+  margin-bottom: vars.$space-24;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: vars.$space-16;
+  gap: vars.$space-16;
+}
+
+.titleBlock {
+  flex: 1;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: vars.$space-8;
+}
+
+.locationRow {
+  display: flex;
+  align-items: center;
+  gap: vars.$space-8;
+  margin-bottom: vars.$space-16;
+}
+
+.locationIcon {
+  color: vars.$color-danger;
+  font-size: 20px;
+}
+
+.ratingSummary {
+  text-align: right;
+  background-color: vars.$color-primary-light;
+  padding: vars.$space-8 vars.$space-16;
+  border-radius: vars.$radius-8;
+}
+
+.ratingSummaryRow {
+  display: flex;
+  align-items: center;
+  gap: vars.$space-4;
+  margin-bottom: vars.$space-4;
+}
+
+.ratingSummaryIcon {
+  font-size: 20px;
+  color: vars.$color-primary;
+}
+
+.ratingSummaryValue {
+  font-weight: 700;
+  color: vars.$color-primary;
+}
+
+.reviewCount {
+  display: block;
+}
+
+.sectionDivider {
+  margin-bottom: vars.$space-24;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: vars.$space-24;
+}
+
+.priceValue {
+  font-weight: 700;
+  color: vars.$color-primary;
+}
+
+.priceLabel {
+  display: block;
+}
+
+.ratingBox {
+  display: flex;
+  align-items: center;
+  gap: vars.$space-8;
+}
+
+.descriptionSection {
+  margin-bottom: vars.$space-24;
+}
+
+.sectionHeading {
+  font-weight: 600;
+  margin-bottom: vars.$space-8;
+  display: flex;
+  align-items: center;
+  gap: vars.$space-8;
+}
+
+.sectionIcon {
+  font-size: 20px;
+}
+
+.descriptionText {
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.amenitiesHeading {
+  font-weight: 600;
+  margin-bottom: vars.$space-16 !important;
+}
+
+.amenitiesList {
+  display: flex;
+  gap: vars.$space-8;
+  flex-wrap: wrap;
+}
+
+.amenityChip {
+  border-color: vars.$color-primary-light !important;
+  color: vars.$color-primary !important;
+  font-weight: 500;
+}
+
+.bookingSidebar {
+  position: sticky;
+  top: vars.$space-80;
+}
+
+@media (max-width: vars.$breakpoint-md) {
+  .titleRow,
+  .priceRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ratingSummary {
+    text-align: left;
+  }
+
+  .bookingSidebar {
+    position: static;
+    top: auto;
+  }
+}
+
+@media (max-width: vars.$breakpoint-sm) {
+  .loadingShell,
+  .pageShell {
+    padding: vars.$space-24 0;
+  }
+
+  .heroImage {
+    height: 280px;
+  }
+
+  .infoCard {
+    padding: vars.$space-24;
+  }
+}

@@ -1,0 +1,48 @@
+@use "../../../../styles/variables" as vars;
+
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$space-12;
+}
+
+.inlineFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: vars.$space-12;
+}
+
+.cardBadges {
+  display: flex;
+  gap: vars.$space-8;
+  margin-bottom: vars.$space-12;
+}
+
+.cardBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  padding: 0 vars.$space-10;
+  border: 1px solid vars.$color-neutral-200;
+  border-radius: vars.$radius-4;
+  color: vars.$color-text-secondary;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  gap: vars.$space-6;
+  transition:
+    border-color vars.$transition-fast,
+    color vars.$transition-fast;
+}
+
+.cardBadgeActive {
+  border-color: vars.$color-primary;
+  color: vars.$color-primary;
+}
+
+@media (max-width: vars.$breakpoint-md) {
+  .inlineFields {
+    grid-template-columns: 1fr;
+  }
+}

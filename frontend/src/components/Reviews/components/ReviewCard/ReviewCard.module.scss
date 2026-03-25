@@ -1,0 +1,28 @@
+@use "../../../../styles/variables" as vars;
+
+.card {
+  margin-bottom: vars.$space-16;
+  transition:
+    box-shadow vars.$transition-fast,
+    transform vars.$transition-fast;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: vars.$space-8;
+  gap: vars.$space-12;
+}
+
+@media (max-width: vars.$breakpoint-sm) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

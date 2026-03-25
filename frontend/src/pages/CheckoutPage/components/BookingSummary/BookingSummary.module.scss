@@ -1,0 +1,36 @@
+@use "../../../../styles/variables" as vars;
+
+.summaryCard {
+  padding: vars.$space-16;
+  position: sticky;
+  top: vars.$space-88;
+}
+
+.summaryTitle {
+  margin-bottom: vars.$space-12;
+  font-weight: 700;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: vars.$space-12;
+  margin-bottom: vars.$space-10;
+}
+
+.summaryValue {
+  font-weight: 600;
+  text-align: right;
+}
+
+.totalLabel,
+.totalValue {
+  font-weight: 700;
+}
+
+@media (max-width: vars.$breakpoint-md) {
+  .summaryCard {
+    position: static;
+  }
+}

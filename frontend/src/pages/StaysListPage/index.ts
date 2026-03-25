@@ -1,0 +1,1 @@
+export { StaysListPage } from "./StaysListPage";

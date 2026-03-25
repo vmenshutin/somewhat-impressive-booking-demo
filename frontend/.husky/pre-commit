@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+repo_root="$(git rev-parse --show-toplevel)"
+cd "$repo_root/frontend" || exit 1
+node ./node_modules/lint-staged/bin/lint-staged.js

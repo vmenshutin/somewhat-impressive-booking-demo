@@ -1,0 +1,33 @@
+@use "./styles/variables" as vars;
+
+html,
+body,
+#root {
+  font-family: "Roboto", sans-serif;
+  color: vars.$color-text-primary;
+}
+
+body {
+  background-color: vars.$color-bg-default;
+}
+
+.appBar {
+  background-color: vars.$color-primary;
+  color: vars.$color-white;
+}
+
+.appBarBrand {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.appLogo {
+  height: vars.$space-32;
+  width: auto;
+}
+
+.appContent {
+  min-height: 100vh;
+  background-color: vars.$color-bg-default;
+}

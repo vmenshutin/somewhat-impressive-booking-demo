@@ -1,0 +1,41 @@
+@use "../../styles/variables" as vars;
+
+.pageShell {
+  padding: vars.$space-24 0 vars.$space-40;
+}
+
+.successCard {
+  padding: vars.$space-20;
+  margin-bottom: vars.$space-16;
+}
+
+.summaryCard {
+  padding: vars.$space-20;
+}
+
+.successTitle {
+  font-weight: 700;
+}
+
+.confirmationId {
+  font-weight: 700;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  gap: vars.$space-12;
+  margin-bottom: vars.$space-10;
+}
+
+.summaryValue {
+  text-align: right;
+  font-weight: 600;
+}
+
+.actionsRow {
+  margin-top: vars.$space-16;
+  display: flex;
+  gap: vars.$space-12;
+  flex-wrap: wrap;
+}

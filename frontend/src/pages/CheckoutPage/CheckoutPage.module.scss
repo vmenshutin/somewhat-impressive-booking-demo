@@ -1,0 +1,19 @@
+@use "../../styles/variables" as vars;
+
+.pageShell {
+  padding: vars.$space-24 0 vars.$space-40;
+}
+
+.contentGrid {
+  align-items: flex-start;
+}
+
+.formCard {
+  padding: vars.$space-16;
+}
+
+@media (max-width: vars.$breakpoint-md) {
+  .formCard {
+    margin-bottom: 0;
+  }
+}

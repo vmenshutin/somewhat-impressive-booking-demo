@@ -1,0 +1,50 @@
+@use "../../styles/variables" as vars;
+
+.datePickerField {
+  margin-bottom: vars.$space-16;
+}
+
+.bookingCard {
+  padding: vars.$space-24;
+  box-shadow: vars.$shadow-medium;
+}
+
+.bookingTitle {
+  font-weight: 700;
+  margin-bottom: vars.$space-8;
+  display: flex;
+  align-items: center;
+  gap: vars.$space-8;
+}
+
+.bookingSubtitle {
+  margin-bottom: vars.$space-24;
+}
+
+.submitButton {
+  margin-top: vars.$space-24 !important;
+  padding-top: vars.$space-12;
+  padding-bottom: vars.$space-12;
+  font-weight: 700;
+  font-size: 16px;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
+
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(25, 118, 210, 0.24);
+  }
+}
+
+.paymentNote {
+  display: block;
+  margin-top: vars.$space-12 !important;
+  text-align: center;
+}
+
+@media (max-width: vars.$breakpoint-sm) {
+  .bookingCard {
+    padding: vars.$space-24;
+  }
+}

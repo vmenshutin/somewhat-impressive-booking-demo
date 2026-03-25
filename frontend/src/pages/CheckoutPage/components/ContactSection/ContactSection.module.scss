@@ -1,0 +1,13 @@
+@use "../../../../styles/variables" as vars;
+
+.sectionContent {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$space-12;
+}
+
+.sectionActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: vars.$space-8;
+}

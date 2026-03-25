@@ -1,0 +1,101 @@
+@use "../../styles/variables" as vars;
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: vars.$radius-10;
+  transition: all vars.$transition-normal;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: vars.$shadow-hover;
+  }
+}
+
+.media {
+  object-fit: cover;
+  height: 176px;
+}
+
+.cardContent {
+  flex-grow: 1;
+  padding: vars.$space-12 vars.$space-12 vars.$space-8 !important;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.375rem;
+  margin-bottom: 0.25rem;
+}
+
+.ratingBadge {
+  background-color: vars.$color-success-light;
+  color: vars.$color-success;
+  padding: 0.25rem 0.5rem;
+  border-radius: vars.$radius-4;
+  font-weight: 600;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.description {
+  margin-bottom: 0.625rem;
+  min-height: unset;
+  line-height: 1.4;
+  color: vars.$color-text-secondary;
+  font-size: 0.875rem;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.amenitiesBox {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.chip {
+  border-color: vars.$color-success-light !important;
+  color: vars.$color-success !important;
+}
+
+.chipAdditional {
+  border-color: vars.$color-text-muted !important;
+  color: vars.$color-text-muted !important;
+}
+
+.chip,
+.chipAdditional {
+  :global(.MuiChip-label) {
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 0.7rem;
+  }
+}
+
+.cardActions {
+  display: flex;
+  justify-content: space-between;
+  padding: vars.$space-0 vars.$space-12 vars.$space-12 !important;
+  align-items: flex-end;
+  gap: vars.$space-8;
+
+  :global(.MuiButton-root) {
+    min-width: 0;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+  }
+}
+
+.priceBox {
+  display: flex;
+  flex-direction: column;
+}

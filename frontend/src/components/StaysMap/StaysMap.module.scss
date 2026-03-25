@@ -1,0 +1,85 @@
+@use "../../styles/variables" as vars;
+
+.markerWrapper {
+  background: transparent;
+  border: 0;
+}
+
+.mapMarker {
+  background-color: vars.$color-accent;
+  border: 3px solid vars.$color-white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: vars.$color-white;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mapMarkerSelected {
+  background-color: vars.$color-primary;
+  border-width: 4px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.popupContent {
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.popupTitle {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.popupLocation {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.popupPrice {
+  display: block;
+  font-weight: 600;
+}
+
+.emptyStatePaper {
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: vars.$color-bg-default;
+}
+
+.emptyStateText {
+  text-align: center;
+}
+
+.mapContainer {
+  height: 100%;
+  min-height: 500px;
+  border-radius: vars.$radius-8;
+  overflow: hidden;
+  box-shadow: vars.$shadow-soft;
+
+  :global(.leaflet-container) {
+    width: 100%;
+    height: 100%;
+    font-family: inherit;
+  }
+}
+
+@media (max-width: vars.$breakpoint-lg) {
+  .mapContainer {
+    min-height: unset;
+  }
+}
