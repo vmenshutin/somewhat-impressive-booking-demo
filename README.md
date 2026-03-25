@@ -14,6 +14,12 @@ A full-stack booking demo with a React + TypeScript frontend and an Express + Ty
 
 Used for backend logic, Redux reducers, and unit tests
 
+## CI/CD
+
+- GitHub Actions pipeline runs on every push and PR
+- Includes linting, tests, and build step
+- Simple release process using git tags and changelog
+
 ## Future Roadmap
 
 1. Persist data with a real database (PostgreSQL + Prisma) instead of in-memory arrays.
